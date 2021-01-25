@@ -2,12 +2,10 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.4.0
     hooks:
-      # - id: check-executables-have-shebangs
       - id: check-yaml
       - id: end-of-file-fixer
         types: [python]
       - id: trailing-whitespace
-      - id: requirements-txt-fixer
   - repo: https://github.com/psf/black
     rev: stable
     hooks:
@@ -23,8 +21,6 @@ repos:
     hooks:
       - id: flake8
         args:
-          # - --ignore=,W503
-          # - --max-complexity=25
           - --max-line-length=90
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v0.782
