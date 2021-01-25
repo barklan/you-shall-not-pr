@@ -40,6 +40,6 @@ repos:
     rev: 5.1.1
     hooks:
       - id: pydocstyle
-        args:
+        # args:
         # - --ignore=D107,D203,D405
         exclude: ^tests/
