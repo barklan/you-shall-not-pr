@@ -1,8 +1,8 @@
-    """This is a docstring for module
-    """
+"""This is a docstring for module"""
+from typing import Any
 
 
-def f(a, b):
+def f(a: Any, b: Any) -> Any:
     """Return the sum of two elements.
 
     Args:
