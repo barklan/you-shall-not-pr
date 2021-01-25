@@ -33,5 +33,5 @@ jobs:
     - name: Coverage
       run: |
         py.test --cov-report=xml --cov=core_package tests/
-        export CODECOV_TOKEN="token"
+        export CODECOV_TOKEN="34ceb412-9853-4340-8bf1-0faa91dea658"
         bash <(curl -s https://codecov.io/bash)
