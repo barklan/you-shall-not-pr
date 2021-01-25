@@ -1,9 +1,10 @@
 # you-shall-not-pr
 You shall not PR.
 
-Rules:
-- All code is formatted using _black_
+Python code Rules:
+- Code is formatted using _black_
 - All .py filenames are in all lowercase characters with no spaces or dashes.
+- Files should start with a docstring describing the contents and usage of the module.
 - All functions and variable names follow Python naming conventions!!!
 - All function parameters and return values are annotated with Python type hints.
 - All imports are sorted alphabetically.
