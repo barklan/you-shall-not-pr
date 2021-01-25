@@ -1,5 +1,9 @@
+    """This is a docstring for module
+    """
+
+
 def f(a, b):
-    """Returns the sum of two elements.
+    """Return the sum of two elements.
 
     Args:
         a (Any): var1
