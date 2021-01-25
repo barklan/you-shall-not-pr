@@ -6,6 +6,7 @@ repos:
       - id: end-of-file-fixer
         types: [python]
       - id: trailing-whitespace
+        exclude: ^tests/
   - repo: https://github.com/psf/black
     rev: stable
     hooks:
@@ -16,6 +17,7 @@ repos:
       - id: isort
         args:
           - --profile=black
+        exclude: ^tests/
   - repo: https://gitlab.com/pycqa/flake8
     rev: 3.8.4
     hooks:
@@ -30,6 +32,7 @@ repos:
           - --ignore-missing-imports
           - --disallow-untyped-defs
           - --disallow-incomplete-defs
+        exclude: ^tests/
   - repo: https://github.com/codespell-project/codespell
     rev: v2.0.0
     hooks:
