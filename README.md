@@ -1,5 +1,7 @@
 # You shall not PR.
 
+`pip install pre-commit` and `pre-commit install` from local env to set up hooks
+
 ### **Rules (will not pass automated tests otherwise):**
 - All functions and variable names follow Python naming conventions!!!
 > **That means they should be exactly like plain English except for `_` instead of spaces.

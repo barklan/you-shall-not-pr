@@ -1,4 +1,4 @@
-"""This is a docstring for module"""
+"""This is a docstring for module."""
 from typing import Any
 
 
