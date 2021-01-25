@@ -1,5 +1,3 @@
 def f(a, b):
+    """Some docstring"""
     return a + b
-
-def func(a, b):
-    return a*b
