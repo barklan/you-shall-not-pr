@@ -34,13 +34,15 @@ repo
 │   ├── ...
 ├── tests
 │   ├── ...
-├── conftest.py  # See https://stackoverflow.com/questions/10253826/path-issue-with-pytest-importerror-no-module-named-yadayadayada
+├── conftest.py
 ├── LICENSE
 ├── README.md
 ├── .gitignore
 ├── requirements.txt
 
 ```
+
+`conftest.py` is here because of [this](https://stackoverflow.com/questions/10253826/path-issue-with-pytest-importerror-no-module-named-yadayadayada)
 
 [PyPA](https://packaging.python.org/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/)
 
