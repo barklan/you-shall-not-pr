@@ -1,10 +1,8 @@
-...
+### Checklist (do not remove it):
 
-### Checklist:
-
-* [ ] All filenames are in all lowercase characters with no spaces or dashes.
-* [ ] All functions and variable names follow Python naming conventions.
+* [ ] All .py filenames are in all lowercase characters with no spaces or dashes!!!
+* [ ] All functions and variable names follow Python naming conventions!!!
 * [ ] All function parameters and return values are annotated with Python type hints.
-* [ ] If this pull request resolves one or more open issues - mention it using `#`
 
-Also, pull requests **will not be merged if they fail the automated tests**. Please, see the log and make necessary changes. Have a nice day :)
+Pull requests **will not be merged if they fail the automated tests**.
+Please, see the log and make necessary changes. Have a nice day :)
