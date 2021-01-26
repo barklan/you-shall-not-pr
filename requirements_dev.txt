@@ -1,0 +1,15 @@
+# dev
+wheel
+setuptools
+twine
+black
+mypy
+flake8
+isort
+pytest
+pytest-cov
+pydocstyle
+codespell
+pre-commit
+
+# project
