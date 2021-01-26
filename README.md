@@ -98,7 +98,7 @@ https://github.com/marketplace/actions/pypi-publish
         - create token in PyPI
         - create a github [secret key](https://docs.github.com/en/actions/reference/encrypted-secrets) `PYPI_API_TOKEN` for that token in github settings & save locally to .env file
         - remove `repository_url: https://test.pypi.org/legacy/` in workflow if publishing to real index
-        - See [tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging) - only tagged commits will be published
+        - See [tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging) - only tagged `stable` commits will be published
     
     - Setup mkdocs --> readthedocs
     - ...
