@@ -1,11 +1,6 @@
 import setuptools
-
-import sys
 import json
 import urllib.request
-
-
-URL_PATTERN = "https://pypi.python.org/pypi/black/json"
 
 
 def get_version(package):
@@ -21,7 +16,15 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 
-next_version = get_version("numpy") + 1
+def make_next_version(version: str) -> str:
+    versions = list(version.split("."))
+    next_minor_version = str(int(versions[-1]) + 1)
+    next_version = ".".join([versions[0], versions[1], next_minor_version])
+    return next_version
+
+
+next_version = make_next_version(get_version("numpy"))
+
 
 setuptools.setup(
     name="barklan-you-shall-not-pass",  # Replace with your own username
