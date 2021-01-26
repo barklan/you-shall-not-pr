@@ -11,5 +11,6 @@ pytest-cov
 pydocstyle
 codespell
 pre-commit
+pdoc3
 
 # project
