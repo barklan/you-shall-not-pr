@@ -1,0 +1,26 @@
+name: Upload docs
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install and publish
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install --upgrade mega.py pdoc3
+        pdoc core_package --html -o docs --force
+        zip -r -q zipped docs/
+        python publish_docs.py
+      env:
+          mega_login: ${{ secrets.MEGA_LOGIN }}
+          mega_pass: ${{ secrets.MEGS_PASS }}
