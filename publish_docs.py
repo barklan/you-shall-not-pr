@@ -9,7 +9,10 @@ mega = Mega()
 
 m = mega.login(login, password)
 
-# file = m.find('index.html')
-# m.rename(file, 'my_file.doc')
+try:
+    file = m.find("docs.zip")
+    m.rename(file, "666.zip")
+except:
+    pass
 
-file = m.upload("zipped.zip")
+file = m.upload("docs.zip")

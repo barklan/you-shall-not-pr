@@ -2,6 +2,7 @@ name: Upload docs
 
 on:
   push:
+    tags: [0-9]+.[0-9]+.[0-9]+
     branches:
     - main
 
@@ -14,12 +15,12 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
-    - name: Install and publish
+    - name: Install and publish docs
       run: |
         python -m pip install --upgrade pip
         python -m pip install --upgrade mega.py pdoc3
         pdoc core_package --html -o docs --force
-        zip -r -q zipped docs/
+        zip -r -q docs docs/
         python publish_docs.py
       env:
           mega_login: ${{ secrets.MEGA_LOGIN }}

@@ -10,78 +10,29 @@ Add here all the badges in the fucking world https://shields.io/
 
 </p>
 
-### Setup
 
-1. Create environment and install requirements_dev.txt:
 
-```bash
-conda create -n foo python=3.9
-conda activate foo
-```
-or
-
-```bash
-python -m venv env
-source env/bin/activate
-# or env/Scripts/activate.bat if on Windows
-```
-
-2. Install pre-commit
-
-```bash
-python -m pip install pre-commit
-cd foo
-pre-commit install
-```
-
-### **Rules (will not pass automated tests otherwise):**
+### **Guidelines:**
 - All functions and variable names follow Python naming conventions!!!
 > **That means they should be exactly like plain English except for `_` instead of spaces.**
-- Code is formatted using _black_
+- Code is formatted using [Black](https://github.com/psf/black)
 - All .py filenames are in all lowercase characters with no spaces or dashes.
-- Files should start with a docstring describing the contents and usage of the module.
-- All public functions and classes should start with a docstring.
-- All function parameters and return values are annotated with Python type hints. [For numpy.](https://numpy.org/devdocs/reference/typing.html)
+- All public modules, classes and functions should start with a descriptive docstring.
+- All function parameters and return values are annotated with Python [type hints](https://docs.python.org/3/library/typing.html). [For numpy](https://numpy.org/devdocs/reference/typing.html).
 - All imports are sorted alphabetically.
 - All files end with a single newline character.
 - Files do not contain any trailing whitespace.
+- Everything should be covered with meaningful tests.
 
 ### **Recomendations:**
-- Use google style docstrings
+- Use google style docstrings.
 - Avoid global variables.
 - Avoid `staticmethod` and limit use of `classmethod`.
 
 ### Misc
 
-```
-repo
-├── .github
-│   ├── workflows
-│   │   ├── ...
-│   │   ├── ...
-│   │   └── ...
-│   └── ...
-├── core_package
-│   ├── __init__.py
-│   ├── ...
-├── tests
-│   ├── ...
-├── conftest.py
-├── LICENSE
-├── README.md
-├── .gitignore
-├── requirements.txt
-
-```
-
 `conftest.py` is here because of [this](https://stackoverflow.com/questions/10253826/path-issue-with-pytest-importerror-no-module-named-yadayadayada)
 
-[PyPA](https://packaging.python.org/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/)
-
-Packaging:
-https://packaging.python.org/tutorials/packaging-projects/
-
-https://github.com/marketplace/actions/pypi-publish
 
 ### Sf
 
@@ -96,10 +47,10 @@ https://github.com/marketplace/actions/pypi-publish
         - first run tests locally to make an initial assessment
     - rename everything in setup.py (don't forget to rename numpy)
         - create token in PyPI
-        - create a github [secret key](https://docs.github.com/en/actions/reference/encrypted-secrets) `PYPI_API_TOKEN` for that token in github settings & save locally to .env file
+        - create a github [secret key](https://docs.github.com/en/actions/reference/encrypted-secrets) `PYPI_API_TOKEN` for that token in github secrets & save locally to .env file
         - remove `repository_url: https://test.pypi.org/legacy/` in workflow if publishing to real index
         - See [tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging) - only tagged commits will be published
-    - Setup mkdocs --> readthedocs
+    - Setup `MEGA_LOGIN` and `MEGS_PASS` in github secrets
     - ...
     ...
 
